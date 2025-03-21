@@ -1,3 +1,4 @@
+{% load static %}
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -6,6 +7,7 @@
     <title>Employee List - Blog App</title>
     <!-- Bootstrap CSS -->
     <link href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="{% static 'css/style.css' %}">
 </head>
 <body>
     <header class="bg-primary text-white p-3">
@@ -64,10 +66,12 @@
                 </tr>
             </tbody>
         </table>
+        <img src="{% static 'images/image.png' %}" alt="">
     </main>
     <footer class="bg-light text-center p-3 mt-4">
         <p>&copy; 2023 Blog App. All rights reserved.</p>
     </footer>
+    
     <!-- Bootstrap JS and dependencies -->
     <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
     <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.5.4/dist/umd/popper.min.js"></script>
