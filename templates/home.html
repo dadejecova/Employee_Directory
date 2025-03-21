@@ -4,31 +4,39 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Home - Blog App</title>
+    <!-- Bootstrap CSS -->
+    <link href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" rel="stylesheet">
 </head>
 <body>
-    <header>
-        <h1>Welcome to the Blog App</h1>
-        <nav>
-            <ul>
-                <li><a href="/">Home</a></li>
-                <li><a href="/about">About</a></li>
-                <li><a href="/contact">Contact</a></li>
-            </ul>
-        </nav>
+    <header class="bg-primary text-white p-3">
+        <div class="container">
+            <h1>Welcome to the Blog App</h1>
+            <nav>
+                <ul class="nav">
+                    <li class="nav-item"><a class="nav-link text-white" href="/">Home</a></li>
+                    <li class="nav-item"><a class="nav-link text-white" href="/about">About</a></li>
+                    <li class="nav-item"><a class="nav-link text-white" href="/contact">Contact</a></li>
+                </ul>
+            </nav>
+        </div>
     </header>
-    <main>
+    <main class="container mt-4">
         <h2>Latest Posts</h2>
-        <ul>
+        <ul class="list-group">
             {% for post in posts %}
-                <li>
+                <li class="list-group-item">
                     <h3><a href="/post/{{ post.id }}">{{ post.title }}</a></h3>
                     <p>{{ post.excerpt }}</p>
                 </li>
             {% endfor %}
         </ul>
     </main>
-    <footer>
+    <footer class="bg-light text-center p-3 mt-4">
         <p>&copy; 2023 Blog App. All rights reserved.</p>
     </footer>
+    <!-- Bootstrap JS and dependencies -->
+    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.5.4/dist/umd/popper.min.js"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
 </body>
 </html>
