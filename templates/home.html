@@ -3,14 +3,14 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Home - Blog App</title>
+    <title>Employee List - Blog App</title>
     <!-- Bootstrap CSS -->
     <link href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" rel="stylesheet">
 </head>
 <body>
     <header class="bg-primary text-white p-3">
         <div class="container">
-            <h1>Welcome to the Blog App</h1>
+            <h1>Employee List</h1>
             <nav>
                 <ul class="nav">
                     <li class="nav-item"><a class="nav-link text-white" href="/">Home</a></li>
@@ -21,15 +21,49 @@
         </div>
     </header>
     <main class="container mt-4">
-        <h2>Latest Posts</h2>
-        <ul class="list-group">
-            {% for post in posts %}
-                <li class="list-group-item">
-                    <h3><a href="/post/{{ post.id }}">{{ post.title }}</a></h3>
-                    <p>{{ post.excerpt }}</p>
-                </li>
-            {% endfor %}
-        </ul>
+        <h2>Employee List</h2>
+        <table class="table">
+            <thead>
+                <tr>
+                    <th>#</th>
+                    <th>First</th>
+                    <th>Last</th>
+                    <th>Handle</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <th scope="row">1</th>
+                    <td>Daniel</td>
+                    <td>Coello</td>
+                    <td>@daco</td>
+                </tr>
+                <tr>
+                    <th scope="row">2</th>
+                    <td>Jane</td>
+                    <td>Doe</td>
+                    <td>@jdoe</td>
+                </tr>
+                <tr>
+                    <th scope="row">3</th>
+                    <td>John</td>
+                    <td>Smith</td>
+                    <td>@jsmith</td>
+                </tr>
+                <tr>
+                    <th scope="row">4</th>
+                    <td>Emily</td>
+                    <td>Jones</td>
+                    <td>@ejones</td>
+                </tr>
+                <tr>
+                    <th scope="row">5</th>
+                    <td>Michael</td>
+                    <td>Brown</td>
+                    <td>@mbrown</td>
+                </tr>
+            </tbody>
+        </table>
     </main>
     <footer class="bg-light text-center p-3 mt-4">
         <p>&copy; 2023 Blog App. All rights reserved.</p>
