@@ -23,29 +23,20 @@
         </div>
     </header>
     <main class="container mt-4">
-        <h2>Employee List</h2>
-        <table class="table">
-            <thead>
-                <tr>
-                    <th>#</th>
-                    <th>Full Name</th>
-                    <th>Designation</th>
-                    <th>Phone number</th>
-                </tr>
-            </thead>
-            <tbody>
-                
-                {% for emp in employees %}
-                <tr>
-                    <td>{{ forloop.counter }}</td>
-                    <td> <a href="{% url 'employee_detail' emp.id %}">{{ emp.first_name }} {{ emp.last_name }}</a></td>
-                    <td>{{ emp.designation }}</td>
-                    <td>{{ emp.phone_number }}</td>
-                </tr>
-                {% endfor %}
+        
+        <div class="card mx-auto" style="width: 18rem;">
+        <img class="card-img-top" src="{{ employee.photo.url }}" alt="Employee Photo">
+        <div class="card-body">
+            <h5 class="card-title">Employee Details</h5>
+            <p class="card-text">{{ employee.first_name}} {{ employee.last_name}}</p>
+            <p class="card-text">Designation: {{ employee.designation }}</p>
+            <p class="card-text">Phone Number: {{ employee.phone_number }}</p>
+            <p class="card-text">Email: {{ employee.email_address }}</p>
+        </div>
+        <a href="{% url 'home' %}" class="btn btn-primary ">Back home</a>
+        </div>
 
-            </tbody>
-        </table>
+        
         
     </main>
     <footer class="bg-light text-center p-3 mt-4">
